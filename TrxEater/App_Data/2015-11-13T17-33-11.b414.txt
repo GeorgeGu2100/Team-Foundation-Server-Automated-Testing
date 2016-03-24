@@ -1,0 +1,46 @@
+Actions
+Delta
+Sales
+Implementation
+KT
+
+Directors
+Foxtrot
+Jim
+
+
+Steps in the Migration
+
+1,Create Sample Data With MigrationGUID [Delta] N
+2,Post to SBM.API-Deve.imoonline/API/V1/Migration/NewMigration[Delta]
+3,New Serena Case
+4,Create Account+Contarct+else
+5,Create Datasource
+6,Post to .../datasourceCode&MigrationGUID N
+7 Post same as 2 /MigrationGUID/ImportFinished[Delta]
+8,Active Check QuoteIT
+9,Set QuoteIT Flag[Delta]
+10,Get Imo-Imoteam1/QuoteIT-Dev/API/Serena/......./MigrationGUID     [Reponse QuoteID][Implementation]
+11,Email Sales MigrationGUID/..../QuoteIT-Dev/home/loadQuote?......
+Content Account Name/ Contact Name/Serena Link
+12,Sales will open QuoteIT link and Accept[Sales]
+13,Post ...../MigrationGUID/QuoteFinaliize[Implementation] With QuoteID
+14,Sales send email	to Client and get signiture[sales]
+15,sales logins to serena to fill out form[sales]
+16,Email KT with stuff and link to serena
+17,Generate MapIT Credential and Email Client
+18,Jim Login to MapIT and Do work
+19, Jim request Baseline Export to JP/sales
+20,JP logins in Serena and work on "Export" and fill out form
+21,Now case in export workflow
+22, Email Implementation to export data with Datasource code, Link to serena  N
+23,Implementation do Export
+24,Implementation fill out export ready form from 22
+25, Email Jim that Export form is ready   H
+26,Jim to Download
+27,Post ...../MigrationGUID/DownloadCompleted
+28,Close Serena Case
+29,KT done With Work(Possible repeat the loop from 20)
+30, Kt fill out KT work complete in SBM  N
+31,KT clicks "Export"
+32, to 21-28
